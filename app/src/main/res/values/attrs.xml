@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChartViewLayout">
+        <attr name="anim_update" format="boolean" />
+        <attr name="left_text_color" format="color" />
+        <attr name="right_text_color" format="color" />
+        <attr name="normal_color" format="color" />
+        <attr name="text_size" format="dimension" />
+        <attr name="selected_color" format="color"/>
+        <attr name="chart_height" format="dimension"/>
+        <attr name="multi_select" format="boolean"/>
+        <attr name="char_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

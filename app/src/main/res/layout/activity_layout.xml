@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:tag="theme_tv"
+        android:id="@+id/tv"
+        android:text="hello world"
+        android:textColor="@color/purple_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.zml.skin.chart.ChartView
+        android:id="@+id/handicap_sell"
+        app:normal_color="#4dff0000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:right_text_color="@color/black"
+        app:anim_update="true"
+        app:text_size="8sp"
+        app:chart_height="20dp"/>
+
+
+    <Button
+        android:id="@+id/btn"
+        android:text="这是安宁"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
