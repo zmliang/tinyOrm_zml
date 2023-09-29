@@ -17,8 +17,6 @@
       <module name="skin.installer" target="11" />
       <module name="skin.orm-api" target="11" />
       <module name="skin.skin" target="11" />
-      <module name="tinyOrm.app" target="11" />
-      <module name="tinyOrm.orm-api" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
