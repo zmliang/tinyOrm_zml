@@ -31,4 +31,37 @@ MyDataBase:注解到数据库管理抽象类
 # 数据库升级策略选择
 # 更丰富，灵活的注解
 
+## 使用方式：
+新建orm管理类，使用MyDataBase注解，
+其他的表结构的创建，操作接口interface的定义略过，
+@MyDataBase
+public abstract class ZMLOrm {
+
+     public abstract ITestDao getTestDao();
+
+
+     public abstract ITestTableEntityDao getTestTableEntityDao();
+
+
+     private static final class Holder{
+          static final ZMLOrm INSTANCE = (ZMLOrm) new Orm.Builder()
+                  .setContext(App.INSTANCE)
+                  .setClazz(ZMLOrm.class)
+                  .build();
+     }
+
+     public final static ZMLOrm getInstance(){
+          return Holder.INSTANCE;
+     }
+}
+
+要使用的时候：
+
+ITestTableEntityDao tableEntityDao = ZMLOrm.getInstance().getTestTableEntityDao();
+                TestTableEntity entity = new TestTableEntity();
+                entity.age = 10;
+                entity.avatar = "头像";
+                entity.classRoom = "幼儿园-小班";
+                entity.name = "张明亮";
+                tableEntityDao.insert(entity);
 
