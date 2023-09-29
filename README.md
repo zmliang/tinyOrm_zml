@@ -60,9 +60,15 @@ public abstract class ZMLOrm {
 
 要使用的时候：
 
-ITestTableEntityDao tableEntityDao = ZMLOrm.getInstance().getTestTableEntityDao();
+               ITestTableEntityDao tableEntityDao = ZMLOrm.getInstance().getTestTableEntityDao();
                 TestTableEntity entity = new TestTableEntity();
                 entity.age = 10;
+                entity.avatar = "头像";
+                entity.classRoom = "幼儿园-小班";
+                entity.name = "张雨薇";
+                tableEntityDao.insert(entity);
+
+
                 entity.avatar = "头像";
                 entity.classRoom = "幼儿园-小班";
                 entity.name = "张明亮";
