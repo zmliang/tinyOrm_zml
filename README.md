@@ -34,6 +34,8 @@ MyDataBase:注解到数据库管理抽象类
 ## 使用方式：
 新建orm管理类，使用MyDataBase注解，
 其他的表结构的创建，操作接口interface的定义略过，
+
+#
 @MyDataBase
 public abstract class ZMLOrm {
 
@@ -54,6 +56,7 @@ public abstract class ZMLOrm {
           return Holder.INSTANCE;
      }
 }
+#
 
 要使用的时候：
 
